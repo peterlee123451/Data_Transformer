@@ -46,8 +46,8 @@ def extract_data_from_text(unstructured_text: str) -> dict:
     response = openai.chat.completions.create(
         model="gpt-4",  
         messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": prompt}
+            {"role": "system", "content": "You are a helpful assistant."}, #persona <- helpful assistant
+            {"role": "user", "content": prompt} 
         ],
         max_tokens=512,
         temperature=0.2
